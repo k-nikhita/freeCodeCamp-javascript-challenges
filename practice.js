@@ -29,11 +29,29 @@ const contacts = [
   
   function lookUpProfile(name, prop) {
     // Only change code below this line
-  
+    for (i = 0; i < contacts.length; i++) {
+    //if name === "Akira"
+    if (name === contacts[i].firstName) {
+        // if prop exists...
+        for (p = 0; p < contacts.length; p++) {
+        console.log(contacts[p][prop])
+        if (prop === contacts[p][prop]) {
+        return contacts[p][prop]
+        }
+        else return "No such property"
+        }
+        
+    }
+    else return "No such contact"
     // Only change code above this line
   }
+}
   
-  lookUpProfile("Akira", "likes");
+lookUpProfile("Akira", "likes");
+
+lookUpProfile("Nikhita", "likes");
+
+lookUpProfile("Akira", "apple");
   
   //PSEUDOCODE:
   //A loop that runs through each item (object) in the array and looks for 2 properties (name and prop) in each object
