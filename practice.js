@@ -28,8 +28,6 @@ const contacts = [
   ];
   
   function lookUpProfile(name, prop) {
-    // Only change code below this line
-  
     const names = contacts.map(contact =>    contact.firstName)
     
     if (names.includes(name)) {
@@ -37,33 +35,22 @@ const contacts = [
         
         const nameIndex = names.findIndex(indexFinder)
         
-        console.log(contacts[nameIndex][prop])
-        
         if (!(Object.hasOwn(contacts[nameIndex], prop))) {
-            console.log("No such property")
-            return
+            return "No such property"
         }
-        return
+        return (contacts[nameIndex][prop])
     }
     if (!names.includes(name)) {
-        console.log ("No such contact")
-        return
+        return "No such contact"
     }
-    
-    // Only change code above this line
-
 }
   
-lookUpProfile("Kristian", "lastName")
+console.log(lookUpProfile("Kristian", "lastName"))
 
-lookUpProfile("Sherlock", "likes")
-
-lookUpProfile("Harry", "likes")
-
-lookUpProfile("Bob", "number")
-
-lookUpProfile("Bob", "potato")
-
-lookUpProfile("Akira", "address")
+// lookUpProfile("Sherlock", "likes")
+// lookUpProfile("Harry", "likes")
+// lookUpProfile("Bob", "number")
+// lookUpProfile("Bob", "potato")
+// lookUpProfile("Akira", "address")
 
   
