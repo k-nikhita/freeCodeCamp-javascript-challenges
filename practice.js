@@ -29,33 +29,41 @@ const contacts = [
   
   function lookUpProfile(name, prop) {
     // Only change code below this line
-    for (i = 0; i < contacts.length; i++) {
-    //if name === "Akira"
-    if (name === contacts[i].firstName) {
-        // if prop exists...
-        for (p = 0; p < contacts.length; p++) {
-        console.log(contacts[p][prop])
-        if (prop === contacts[p][prop]) {
-        return contacts[p][prop]
-        }
-        else return "No such property"
-        }
+  
+    const names = contacts.map(contact =>    contact.firstName)
+    
+    if (names.includes(name)) {
+        const indexFinder = (contactName => contactName === name)
         
+        const nameIndex = names.findIndex(indexFinder)
+        
+        console.log(contacts[nameIndex][prop])
+        
+        if (!(Object.hasOwn(contacts[nameIndex], prop))) {
+            console.log("No such property")
+            return
+        }
+        return
     }
-    else return "No such contact"
+    if (!names.includes(name)) {
+        console.log ("No such contact")
+        return
+    }
+    
     // Only change code above this line
-  }
+
 }
   
-lookUpProfile("Akira", "likes");
+lookUpProfile("Kristian", "lastName")
 
-lookUpProfile("Nikhita", "likes");
+lookUpProfile("Sherlock", "likes")
 
-lookUpProfile("Akira", "apple");
+lookUpProfile("Harry", "likes")
+
+lookUpProfile("Bob", "number")
+
+lookUpProfile("Bob", "potato")
+
+lookUpProfile("Akira", "address")
+
   
-  //PSEUDOCODE:
-  //A loop that runs through each item (object) in the array and looks for 2 properties (name and prop) in each object
-  //a loop to run through each object looking for values corresponding to certain keys
-  // if name === "Akira" (value of firstName property) return value of prop
-  // else return "no such contact"
-  // else return "no such property"
