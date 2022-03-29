@@ -53,6 +53,27 @@ console.log(lookUpProfile("Kristian", "lastName"))
 // lookUpProfile("Bob", "potato")
 // lookUpProfile("Akira", "address")
 
+//---------------------------------------------------------------
+  //2. Use Recursion to Create a Countdown
+  
+  function countdown(n){
+      //base case
+      if (n < 1) {
+          return []
+      }
+      else {
+          const numbers = countdown(n - 1)
+          numbers.unshift(n)
+          return numbers
+      }
+  }
+
+  console.log(countdown(7))
+// [5, 4, 3, 2, 1]
+// unshift does the opposite of push, i.e. adds one or more elements to the front of an array and returns the new length of the array
+
+//--------------------------------------------------------------------
+
   //3. Use Recursion to Create a Range of Numbers
 
   function rangeOfNumbers(startNum, endNum) {
