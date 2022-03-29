@@ -53,4 +53,38 @@ console.log(lookUpProfile("Kristian", "lastName"))
 // lookUpProfile("Bob", "potato")
 // lookUpProfile("Akira", "address")
 
+  //3. Use Recursion to Create a Range of Numbers
+
+  function rangeOfNumbers(startNum, endNum) {
+       //Base case
+      if (startNum - endNum === 0) {
+        return [startNum]
+      }
+      //Recursive call to itself
+      else { 
+        const array = rangeOfNumbers(startNum, endNum - 1)
+        array.push(endNum)
+        return array
+      }
+  }
+
+  //ALTERNATIVE WAY OF WRITING THE ABOVE:
+//   function rangeOfNumbers(startNum, endNum) {
+//       return startNum === endNum
+//       ? [startNum]
+//       : rangeOfNumbers(startNum, endNum - 1).concat(endNum)
+//     }
+
+  console.log(rangeOfNumbers(1, 10))
+
+
+  //With a recursion function, you are creating a stack of functions.
+  //for example, rangeOfNumbers(1,5) would create the following stack of functions:
+  // rangeOfNumers(1,4) ---> output is [5]
+  // rangeOfNumers(1,3) ---> output is [4]
+  // rangeOfNumers(1,2) ---> output is [3]
+  // rangeOfNumers(1,1) ---> output is [2]
+  // and because we have arrived at the base case (startNum - endNum ===0), then the final output = [startNum], ie. [1]
+
+  //The numbers are pushed to the array in the order of lines 88, 87, 86, 85, 84 because you start at the bottom of the pile of functions, i.e. the base case.
   
