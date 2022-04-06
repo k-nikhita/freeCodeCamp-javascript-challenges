@@ -14,6 +14,8 @@ If name does not correspond to any contacts then return the string No such conta
 
 If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
 
+<hr>
+
 ### 2. Basic Javascript > Use Recursion to Create a Countdown
 
 In a previous challenge, you learned how to use recursion to replace a for loop. Now, let's look at a more complex function that returns an array of consecutive integers starting with 1 through the number passed to the function.
@@ -41,8 +43,29 @@ At first, this seems counterintuitive since the value of n decreases, but the va
 
 We have defined a function called countdown with one parameter (n). The function should use recursion to return an array containing the integers n through 1 based on the n parameter. If the function is called with a number less than 1, the function should return an empty array. For example, calling this function with n = 5 should return the array [5, 4, 3, 2, 1]. Your function must use recursion by calling itself and must not use loops of any kind.
 
+<hr>
+
 ### 3. Basic Javascript > Use Recursion to Create a Range of Numbers
 
 Continuing from the previous challenge, we provide you another opportunity to create a recursive function to solve a problem.
 
 We have defined a function named rangeOfNumbers with two parameters. The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same.
+
+
+### 4. Regular Expressions > Restrict Possible Usernames
+
+Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.
+
+You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
+
+Usernames can only use alpha-numeric characters.
+
+The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+
+Username letters can be lowercase and uppercase.
+
+Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+
+Change the regex userCheck to fit the constraints listed above.
+
+Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions

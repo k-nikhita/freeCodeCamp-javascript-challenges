@@ -54,7 +54,7 @@ console.log(lookUpProfile("Kristian", "lastName"))
 // lookUpProfile("Akira", "address")
 
 //---------------------------------------------------------------
-  //2. Use Recursion to Create a Countdown
+  //2. Basic JavaScript > Use Recursion to Create a Countdown
   
   function countdown(n){
       //base case
@@ -74,7 +74,7 @@ console.log(lookUpProfile("Kristian", "lastName"))
 
 //--------------------------------------------------------------------
 
-  //3. Use Recursion to Create a Range of Numbers
+  //3. Basic JavaScript > Use Recursion to Create a Range of Numbers
 
   function rangeOfNumbers(startNum, endNum) {
        //Base case
@@ -109,3 +109,25 @@ console.log(lookUpProfile("Kristian", "lastName"))
 
   //The numbers are pushed to the array in the order of lines 88, 87, 86, 85, 84 because you start at the bottom of the pile of functions, i.e. the base case.
   
+  //4. Regular Expressions > Restrict Possible Usernames
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+let result = userCheck.test(username)
+
+console.log(result)
+console.log(`1. ${userCheck.test('JACK')}`)
+console.log(`2. ${userCheck.test('J')}`)
+console.log(`3. ${userCheck.test('Jo')}`)
+console.log(`4. ${userCheck.test('Oceans11')}`)
+console.log(`5. ${userCheck.test('RegexGuru')}`)
+console.log(`6. ${userCheck.test('007')}`)
+console.log(`7. ${userCheck.test('9')}`)
+console.log(`8. ${userCheck.test('A1')}`)
+console.log(`9. ${userCheck.test('BadUs3rnam3')}`)
+console.log(`10. ${userCheck.test('Z97')}`)
+console.log(`11. ${userCheck.test('c57bT3')}`)
+console.log(`12. ${userCheck.test('AB1')}`)
+console.log(`13. ${userCheck.test('J%4')}`)
+
+
