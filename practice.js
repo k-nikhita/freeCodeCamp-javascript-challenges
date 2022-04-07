@@ -116,18 +116,42 @@ let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
 let result = userCheck.test(username)
 
 console.log(result)
-console.log(`1. ${userCheck.test('JACK')}`)
-console.log(`2. ${userCheck.test('J')}`)
-console.log(`3. ${userCheck.test('Jo')}`)
-console.log(`4. ${userCheck.test('Oceans11')}`)
-console.log(`5. ${userCheck.test('RegexGuru')}`)
-console.log(`6. ${userCheck.test('007')}`)
-console.log(`7. ${userCheck.test('9')}`)
-console.log(`8. ${userCheck.test('A1')}`)
-console.log(`9. ${userCheck.test('BadUs3rnam3')}`)
-console.log(`10. ${userCheck.test('Z97')}`)
-console.log(`11. ${userCheck.test('c57bT3')}`)
-console.log(`12. ${userCheck.test('AB1')}`)
-console.log(`13. ${userCheck.test('J%4')}`)
+// console.log(`1. ${userCheck.test('JACK')}`)
+// console.log(`2. ${userCheck.test('J')}`)
+// console.log(`3. ${userCheck.test('Jo')}`)
+// console.log(`4. ${userCheck.test('Oceans11')}`)
+// console.log(`5. ${userCheck.test('RegexGuru')}`)
+// console.log(`6. ${userCheck.test('007')}`)
+// console.log(`7. ${userCheck.test('9')}`)
+// console.log(`8. ${userCheck.test('A1')}`)
+// console.log(`9. ${userCheck.test('BadUs3rnam3')}`)
+// console.log(`10. ${userCheck.test('Z97')}`)
+// console.log(`11. ${userCheck.test('c57bT3')}`)
+// console.log(`12. ${userCheck.test('AB1')}`)
+// console.log(`13. ${userCheck.test('J%4')}`)
 
+//5. Debugging > Use Caution When Reinitializing Variables Inside a Loop
 
+//PSEUDOCODE
+// m is the number of rows; n is columns
+
+function zeroArray(m, n) {
+  // Creates a 2-D array with m rows and n columns of zeroes
+  let newArray = [];
+  let row = [];
+  for (let i = 0; i < m; i++) {
+    // Adds the m-th row into newArray
+
+    for (let j = 0; j < n; j++) {
+      // Pushes n zeroes into the current row to create the columns
+      row.push(0);
+    }
+    // Pushes the current row, which now has n zeroes in it, to the array
+    newArray.push(row);
+    row = []; //DON'T UNDERSTAND WHY?!
+  }
+  return newArray;
+}
+
+let matrix = zeroArray(3, 2);
+console.log(matrix);

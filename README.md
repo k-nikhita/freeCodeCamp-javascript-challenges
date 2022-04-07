@@ -69,3 +69,5 @@ Usernames have to be at least two characters long. A two-character username can 
 Change the regex userCheck to fit the constraints listed above.
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#regular-expressions
